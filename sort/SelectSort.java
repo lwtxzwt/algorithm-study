@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 /**
  * 选择排序
+ * @author lwtxzwt
  */
 public class SelectSort {
 

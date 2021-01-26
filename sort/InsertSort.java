@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 /**
  * 插入排序
+ * @author lwtxzwt
  */
 public class InsertSort {
 

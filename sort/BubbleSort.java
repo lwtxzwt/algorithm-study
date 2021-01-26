@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序
+ * @author lwtxzwt
  */
 public class BubbleSort {
 
