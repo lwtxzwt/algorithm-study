@@ -20,7 +20,8 @@ public class QuickSort {
 
     int left = p;
     int right = r;
-    int key = numbers[p];
+    int mid = (p + r) / 2;
+    int key = numbers[mid];
 
     while (left < right) {
       while (key <= numbers[right] && left < right) {
@@ -38,7 +39,7 @@ public class QuickSort {
       }
     }
 
-    numbers[p] = numbers[left];
+    numbers[mid] = numbers[left];
     numbers[left] = key;
     quickSort(numbers, p, right - 1);
     quickSort(numbers, right + 1, r);
