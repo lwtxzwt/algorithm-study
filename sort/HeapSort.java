@@ -12,7 +12,7 @@ public class HeapSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void heapSort(int[] numbers) {
+  private static void heapSort(int[] numbers) {
     for (int i = (numbers.length - 1) / 2; i >= 0; i--) {
       //从第一个非叶子结点从下至上，从右至左调整结构
       adjustHeap(numbers, i, numbers.length);

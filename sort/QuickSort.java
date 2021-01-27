@@ -13,7 +13,7 @@ public class QuickSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void quickSort(int[] numbers, int p, int r) {
+  private static void quickSort(int[] numbers, int p, int r) {
     if (p >= r) {
       return;
     }
@@ -33,9 +33,7 @@ public class QuickSort {
       }
 
       if (left < right) {
-        int tmp = numbers[left];
-        numbers[left] = numbers[right];
-        numbers[right] = tmp;
+        swap(numbers, left, right);
       }
     }
 
@@ -45,4 +43,13 @@ public class QuickSort {
     quickSort(numbers, right + 1, r);
   }
 
+  private static void swap(int[] arr, int i, int j) {
+    if (i == j) {
+      return;
+    }
+
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
 }

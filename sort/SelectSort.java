@@ -12,18 +12,24 @@ public class SelectSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void selectSort(int[] numbers) {
+  private static void selectSort(int[] numbers) {
     for (int i = 0; i < numbers.length; i++) {
       int min = i;
       for (int j = i; j < numbers.length; j++) {
         if (numbers[j] < numbers[min]) min = j;
       }
 
-      if (min != i) {
-        int tmp = numbers[i];
-        numbers[i] = numbers[min];
-        numbers[min] = tmp;
-      }
+      swap(numbers, i, min);
     }
+  }
+
+  private static void swap(int[] arr, int i, int j) {
+    if (i == j) {
+      return;
+    }
+
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
   }
 }

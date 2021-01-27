@@ -12,14 +12,12 @@ public class BubbleSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void bubbleSort(int[] numbers) {
+  private static void bubbleSort(int[] numbers) {
     for (int i = 0; i < numbers.length - 1; i++) {
       boolean tag = false;
       for (int j = 0; j < numbers.length - 1 - i; j++) {
         if (numbers[j] > numbers[j + 1]) {
-          int tmp = numbers[j];
-          numbers[j] = numbers[j + 1];
-          numbers[j + 1] = tmp;
+          swap(numbers, j, j + 1);
           tag = true;
         }
       }
@@ -27,5 +25,15 @@ public class BubbleSort {
         break;
       }
     }
+  }
+
+  private static void swap(int[] arr, int i, int j) {
+    if (i == j) {
+      return;
+    }
+
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
   }
 }

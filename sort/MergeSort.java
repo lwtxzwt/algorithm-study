@@ -12,7 +12,7 @@ public class MergeSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void sort(int[] numbers, int start, int end) {
+  private static void sort(int[] numbers, int start, int end) {
     if (start < end) {
       int middle = (start + end) / 2;
       sort(numbers, start, middle);
@@ -21,7 +21,7 @@ public class MergeSort {
     }
   }
 
-  public static void merge(int[] numbers, int start, int middle, int end) {
+  private static void merge(int[] numbers, int start, int middle, int end) {
     int[] tmp = new int[end - start + 1];
     int i = start;
     int j = middle + 1;

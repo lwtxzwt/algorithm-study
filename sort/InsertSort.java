@@ -12,7 +12,7 @@ public class InsertSort {
     Arrays.stream(numbers).forEach(System.out::println);
   }
 
-  public static void insertSort(int[] numbers) {
+  private static void insertSort(int[] numbers) {
     for (int i = 1; i < numbers.length; i++) {
       int tmp = numbers[i];
       for (int j = i - 1; j >= 0; j--) {
